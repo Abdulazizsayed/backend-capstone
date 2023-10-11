@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 class MenuViewSet(ModelViewSet):
     serializer_class = MenuSerializer
     queryset = Menu.objects.all()
+    permission_classes = [IsAuthenticated]
 
 
 class BookingViewSet(ModelViewSet):
